@@ -1,10 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import pickle 
+from django.urls import reverse
 
 # Create your views here.
-prostate = pickle.load('https://ml-models-185041958351.s3.amazonaws.com/prostate_model.pkl')
 def home(request):
-    prostate_score = prostate.best_score
-    return render(request, "home.html", locals())
+    context = {
+        'view_url': reverse('breast_cancer_home')
+    }
+    return render(request, "home.html", context)
 
+
+def breast_predictor(request):
+    return render(request, 'breast_predictor.html', locals())
+
+def cervical_predictor(request):
+    return render(request, 'cervical_predictor.html', locals())
+
+def prostate_predictor(request):
+    return render(request, 'prostate_predictor.html', locals())

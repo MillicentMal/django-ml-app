@@ -1,0 +1,29 @@
+.navbar-nav a {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+
+}
+
+.navbar-brand {
+    font-family: 'Rufina', serif;
+    color: black;
+    font-weight: bold;
+}
+
+nav {
+    background-color: pink;
+}
+
+.btn {
+    background-color: #AA336A ;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1 {
+    font-family: 'Rufina', serif;
+}
+
+p {
+    font-family:'Montserrat', sans-serif ;
+}

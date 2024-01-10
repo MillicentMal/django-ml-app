@@ -1,24 +1,15 @@
-"""
-URL configuration for predican project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
 from breast_cancer import views as breast_views
+from prostate_cancer import views as prostate_views
+from cervical_cancer import views as cervical_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("breast_cancer/", breast_views.home, name="breast_cancer_home")
+    path("breast_cancer/", breast_views.home, name="breast_cancer_home"), 
+    path("breast_predictor/", breast_views.breast_predictor, name="breast_predictor"), 
+    path("cervical_predictor/", cervical_views.cervical_predictor, name="cervical_predictor"),
+    path("prostate_predictor/", prostate_views.prostate_predictor, name="prostate_predictor"),
+
 ]
