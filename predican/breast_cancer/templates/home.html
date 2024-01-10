@@ -22,17 +22,29 @@
     </div>
   </div>
 </div>
-
 <div class="container">
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Why Breast Cancer</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Learn More</a>
+  <div class="row">
+  
+    <div class="col-lg-6 col-sm-12 align-self-center">
+      <h1>Why Now?</h1>
+  <p>Every minute counts when it comes to diagnosing breast cancer. The earlier the diagnosis, the better the prognosis and the higher the survival rates. With advancements in technology, we now have the tools to detect breast cancer at its earliest stages, even before symptoms appear.</p>
+  <p>Our web app leverages these technological advancements to provide accurate predictions, empowering individuals to take charge of their health. Now is the time to prioritize early detection and change the narrative of breast cancer. Join us in making early diagnosis the new normal.</p>
+      <button class="btn btn-secondary w-50">Start Now</button>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      {% load static %}
+      <img class="img-fluid pe-6" src="{% static 'images/cancer_survivor.jpeg' %}" alt="Image Description">
     </div>
   </div>
 </div>
+<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-body" href="https://predican.com/">Predican</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 {% endblock %}
 <body>
   
